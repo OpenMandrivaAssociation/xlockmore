@@ -10,8 +10,8 @@
 
 Name: 		%{name}
 Summary:	An X terminal locking program
-Version:	%{version}
-Release:	%{release}
+Version: 5.23
+Release: %mkrel 1
 License:	MIT
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
