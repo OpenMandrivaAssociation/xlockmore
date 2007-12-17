@@ -30,7 +30,6 @@ BuildRequires: mesa-common-devel
 BuildRequires: pam-devel 
 BuildRequires: X11-devel 
 BuildRequires: xpm-devel 
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The xlockmore utility is an enhanced version of the standard xlock
