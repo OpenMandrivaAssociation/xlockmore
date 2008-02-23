@@ -1,6 +1,6 @@
 %define	name	xlockmore
 %define	version	5.22
-%define release	%mkrel 5
+%define release	%mkrel 1
 %define	enable_matrix	0
 
 # Allow --with[out] <feature> at rpm command line build
@@ -10,7 +10,7 @@
 
 Name: 		%{name}
 Summary:	An X terminal locking program
-Version: 5.23
+Version: 5.25
 Release: %mkrel 1
 License:	MIT
 Group:		Graphical desktop/Other
