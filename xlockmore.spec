@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.25
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -18,6 +18,7 @@ BuildRequires:	mesa-common-devel
 BuildRequires:	pam-devel 
 BuildRequires:	X11-devel 
 BuildRequires:	xpm-devel 
+BuildRequires:	librplay-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -57,7 +58,8 @@ autoconf
 	--enable-syslog \
 	--disable-setuid \
 	--with-crypt \
-	--enable-appdefaultdir=%{_sysconfdir}/X11/app-defaults
+	--without-rplay \
+	--enable-appdefaultdir=%{_datadir}/X11/app-defaults
 %make
 
 %install
@@ -69,7 +71,7 @@ perl -p -i -e 's/-o root//g' Makefile */Makefile
 %makeinstall
 
 install -m644 xlock/xlock.man -D %{buildroot}%{_mandir}/man1/xlock.1
-install -m644 xlock/XLock.ad -D %{buildroot}%{_sysconfdir}/X11/app-defaults/XLock
+install -m644 xlock/XLock.ad -D %{buildroot}%{_datadir}/X11/app-defaults/XLock
 install -m644 %{SOURCE1} -D %{buildroot}%{_sysconfdir}/pam.d/xlock
 
 cp sounds/*.au %{buildroot}%{_datadir}/sounds/xlockmore
@@ -97,7 +99,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/xlock
 %{_mandir}/man1/xlock.1*
-%config(noreplace) %{_sysconfdir}/X11/app-defaults/XLock
+%config(noreplace) %{_datadir}/X11/app-defaults/XLock
 %{_datadir}/sounds/xlockmore
 %{_datadir}/applications/%{name}.desktop
 %config(noreplace) %{_sysconfdir}/pam.d/*
