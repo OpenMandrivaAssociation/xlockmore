@@ -18,7 +18,6 @@ BuildRequires:	mesa-common-devel
 BuildRequires:	pam-devel 
 BuildRequires:	X11-devel 
 BuildRequires:	xpm-devel 
-BuildRequires:	librplay-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
