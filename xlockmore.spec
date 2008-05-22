@@ -98,7 +98,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%attr(2711,root,shadow) %{_bindir}/xlock
+%attr(2711,root,chkpwd) %{_bindir}/xlock
 %{_mandir}/man1/xlock.1*
 %config(noreplace) %{_datadir}/X11/app-defaults/XLock
 %{_datadir}/sounds/xlockmore
