@@ -1,13 +1,14 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.25
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
 Source:		ftp://ftp.tux.org/pub/tux/bagleyd/xlockmore/%{name}-%{version}.tar.bz2
 Source1:	xlock.pamd
 Patch0:		xlockmore-5.22-soundpath.patch
+Patch1:		xlockmore-5.25-drop_setgid.patch
 Patch3:		xlockmore-5.19-include_ftgl_path.patch
 Requires:	pam >= 0.59 
 Requires:	fortune-mod
@@ -42,6 +43,7 @@ A GTK2 front-end to xlockmore.
 %prep
 %setup -q
 %patch0 -p1 -b .soundpath
+%patch1 -p0 -b .drop_setgid
 %patch3 -p1 -b .include_ftgl_path
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
@@ -96,7 +98,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%{_bindir}/xlock
+%attr(2711,root,shadow) %{_bindir}/xlock
 %{_mandir}/man1/xlock.1*
 %config(noreplace) %{_datadir}/X11/app-defaults/XLock
 %{_datadir}/sounds/xlockmore
