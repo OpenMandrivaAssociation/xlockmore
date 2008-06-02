@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.25
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -13,6 +13,8 @@ Patch3:		xlockmore-5.19-include_ftgl_path.patch
 Requires:	pam >= 0.59 
 Requires:	fortune-mod
 Requires:	pam
+#fhimpe: needed for chkpwd group
+Requires:	setup >= 2.7.12-2
 BuildRequires:	esound-devel 
 BuildRequires:	gtk+2-devel
 BuildRequires:	mesa-common-devel 
