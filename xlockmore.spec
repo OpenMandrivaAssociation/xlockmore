@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.26.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -100,7 +100,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%attr(2711,root,chkpwd) %{_bindir}/xlock
+%attr(2755,root,chkpwd) %{_bindir}/xlock
 %{_mandir}/man1/xlock.1*
 %config(noreplace) %{_datadir}/X11/app-defaults/XLock
 %{_datadir}/sounds/xlockmore
