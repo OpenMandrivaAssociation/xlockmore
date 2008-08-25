@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.26.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -45,7 +45,7 @@ A GTK2 front-end to xlockmore.
 %prep
 %setup -q
 %patch0 -p1 -b .soundpath
-%patch1 -p0 -b .drop_setgid
+#%patch1 -p0 -b .drop_setgid
 %patch3 -p1 -b .include_ftgl_path
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
