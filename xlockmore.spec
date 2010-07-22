@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.28
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -19,7 +19,8 @@ BuildRequires:	esound-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	mesa-common-devel 
 BuildRequires:	pam-devel 
-BuildRequires:	X11-devel 
+BuildRequires:	libx11-devel
+BuildRequires:	libxext-devel
 BuildRequires:	xpm-devel 
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
