@@ -1,0 +1,14 @@
+diff -Naur xlockmore-5.30/modes/glx/text3d2.cc xlockmore-5.30.tpg//modes/glx/text3d2.cc
+--- xlockmore-5.30/modes/glx/text3d2.cc	2010-02-02 20:44:28.000000000 +0000
++++ xlockmore-5.30.tpg//modes/glx/text3d2.cc	2011-06-19 11:58:52.000000000 +0000
+@@ -82,8 +82,8 @@
+   #include "FTGL/FTGLExtrdFont.h"
+   #include "FTGL/FTGLOutlineFont.h"
+ #else
+-  #include "FTGLExtrdFont.h"
+-  #include "FTGLOutlineFont.h"
++  #include "FTGL/FTGLExtrdFont.h"
++  #include "FTGL/FTGLOutlineFont.h"
+ #endif
+ #endif
+ 
