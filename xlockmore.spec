@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.34
-Release:	%mkrel 3
+Release:	4
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -22,7 +22,6 @@ BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xext)
 BuildRequires:	xpm-devel 
 BuildRequires:	pkgconfig(xt)
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The xlockmore utility is an enhanced version of the standard xlock
