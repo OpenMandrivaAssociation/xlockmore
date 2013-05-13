@@ -18,8 +18,8 @@ BuildRequires:	esound-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	mesa-common-devel 
 BuildRequires:	pam-devel 
-BuildRequires:	libx11-devel
-BuildRequires:	libxext-devel
+BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(xext)
 BuildRequires:	xpm-devel 
 BuildRequires:	pkgconfig(xt)
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
