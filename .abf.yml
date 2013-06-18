@@ -1,2 +1,4 @@
+removed_sources:
+  xlockmore-5.34.tar.bz2: 66ec50754e30b81ef6c1db62b3a8034f66d3c582
 sources:
-  "xlockmore-5.34.tar.bz2": 66ec50754e30b81ef6c1db62b3a8034f66d3c582
+  xlockmore-5.42.tar.bz2: 01690dcebb6109d9e7912f00d84d63b6e14c4838
