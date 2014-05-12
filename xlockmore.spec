@@ -64,7 +64,7 @@ autoconf
 	--without-motif \
 	--with-gtk2 \
 	--without-gtk \
-	--enable-pam \
+	--enable-pam --enable-bad-pam \
 	--enable-syslog \
 	--disable-setuid \
 	--with-crypt \
@@ -104,7 +104,7 @@ EOF
 
 %files
 %defattr(-,root,root)
-%attr(2755,root,chkpwd) %{_bindir}/xlock
+%attr(4755,root,chkpwd) %{_bindir}/xlock
 %{_mandir}/man1/xlock.1*
 %config(noreplace) %{_datadir}/X11/app-defaults/XLock
 %{_datadir}/sounds/xlockmore
