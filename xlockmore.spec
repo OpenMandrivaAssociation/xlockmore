@@ -56,8 +56,6 @@ A GTK2 front-end to xlockmore.
 
 %build
 
-export CXXFLAGS="-laudiofile"
-
 autoconf
 
 %configure2_5x \
