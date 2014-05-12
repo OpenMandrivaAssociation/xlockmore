@@ -1,7 +1,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
-Version:	5.42
-Release:	5
+Version:	5.43
+Release:	1
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
@@ -71,18 +71,15 @@ autoconf
 	--without-rplay \
 	--enable-appdefaultdir=%{_datadir}/X11/app-defaults
 %make
-# Apparently not built if xglock is being built
-cd xlock
-%__cxx %optflags -o xlock *.o ../modes/*.o ../modes/glx/*.o -lX11 -lXinerama -lGL -lpam -lGLU -lXext -lXpm -laudio -lftgl -lXmu
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_datadir}/sounds/xlockmore
+mkdir -p %{buildroot}%{_datadir}/xlock
 
-perl -p -i -e 's/-o root//g' Makefile */Makefile
-%makeinstall
-
+install -m 755 xlock/xlock -D %{buildroot}%{_bindir}/xlock
+install -m 755 xglock/xglock -D %{buildroot}%{_bindir}/xglock
 install -m644 xlock/xlock.man -D %{buildroot}%{_mandir}/man1/xlock.1
 install -m644 xlock/XLock.ad -D %{buildroot}%{_datadir}/X11/app-defaults/XLock
 install -m644 %{SOURCE1} -D %{buildroot}%{_sysconfdir}/pam.d/xlock
@@ -98,11 +95,11 @@ cat >> %{buildroot}%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
 Name=Xlock
 Comment=X11 screen saver
-Icon=gnome-lockscreen.png
+Icon=gnome-lockscreen
 Exec=xlock
 Terminal=false
 Type=Application
-Category=System;
+Categories=System;
 EOF
 
 %files
