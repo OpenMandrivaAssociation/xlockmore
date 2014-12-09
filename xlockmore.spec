@@ -55,10 +55,10 @@ A GTK2 front-end to xlockmore.
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
 %build
-
+%global optflags %{optflags} -I/usr/include/freetype2
 autoconf
 
-%configure2_5x \
+%configure \
 	--without-motif \
 	--with-gtk2 \
 	--without-gtk \
