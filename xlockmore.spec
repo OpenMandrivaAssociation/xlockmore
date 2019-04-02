@@ -17,6 +17,7 @@ Requires:	fortune-mod
 Requires:	pam
 #fhimpe: needed for chkpwd group
 Requires:	setup >= 2.7.12-2
+BuildRequires:	autoconf-archive
 BuildRequires:	pkgconfig(gtk+-x11-2.0)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(ftgl)
