@@ -53,6 +53,7 @@ A GTK2 front-end to xlockmore.
 %prep
 %setup -q
 %patch3 -p1 -b .include_ftgl_path
+%patch4 -p1
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
