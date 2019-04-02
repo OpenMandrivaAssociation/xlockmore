@@ -53,13 +53,13 @@ A GTK2 front-end to xlockmore.
 %prep
 %setup -q
 %patch3 -p1 -b .include_ftgl_path
-%patch4 -p1
+%patch4 -p1 -b .pthreads
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
 %build
+autoreconf -i
 %global optflags %{optflags} -I/usr/include/freetype2
-autoconf
 
 %configure \
 	--without-motif \
