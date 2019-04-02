@@ -11,6 +11,7 @@ Url:		http://www.tux.org/~bagleyd/xlockmore.html
 Source0:	http://www.tux.org/~bagleyd/xlock/%name-%version/%name-%version.tar.xz
 Source1:	xlock.pamd
 Patch3:		xlockmore-5.30-include_ftgl_path.patch
+Patch4:		xlockmore-5.56-pthreads.patch
 Requires:	pam >= 0.59
 Requires:	fortune-mod
 Requires:	pam
