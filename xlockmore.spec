@@ -3,19 +3,21 @@
 
 Name:		xlockmore
 Summary:	An X terminal locking program
-Version:	5.46
-Release:	2
+Version:	5.56
+Release:	1
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
 Source0:	http://www.tux.org/~bagleyd/xlock/%name-%version/%name-%version.tar.xz
 Source1:	xlock.pamd
 Patch3:		xlockmore-5.30-include_ftgl_path.patch
+Patch4:		xlockmore-5.56-pthreads.patch
 Requires:	pam >= 0.59
 Requires:	fortune-mod
 Requires:	pam
 #fhimpe: needed for chkpwd group
 Requires:	setup >= 2.7.12-2
+BuildRequires:	autoconf-archive
 BuildRequires:	pkgconfig(gtk+-x11-2.0)
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(ftgl)
@@ -52,12 +54,13 @@ A GTK2 front-end to xlockmore.
 %prep
 %setup -q
 %patch3 -p1 -b .include_ftgl_path
+%patch4 -p1 -b .pthreads
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
 %build
+autoreconf -i
 %global optflags %{optflags} -I/usr/include/freetype2
-autoconf
 
 %configure \
 	--without-motif \
