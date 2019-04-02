@@ -1,0 +1,11 @@
+--- xlockmore-5.56/configure.ac.pthreads	2018-08-13 14:56:09.294133124 +0200
++++ xlockmore-5.56/configure.ac	2018-08-13 14:56:19.183806843 +0200
+@@ -22,7 +22,7 @@
+ 
+   # AX_PTHREAD is from the GNU Autoconf Archive.
+   # https://savannah.gnu.org/projects/autoconf-archive/
+-  m4_include(ax_pthread.m4)
++#  m4_include(ax_pthread.m4)
+ 
+   # This affects CC, LIBS, and CFLAGS, instead of defining new variables.
+ 
