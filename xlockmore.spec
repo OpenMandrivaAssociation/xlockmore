@@ -3,7 +3,7 @@
 
 Name:		xlockmore
 Summary:	An X terminal locking program
-Version:	5.58
+Version:	5.59
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Other
@@ -72,7 +72,7 @@ autoreconf -i
 	--with-crypt \
 	--without-rplay \
 	--enable-appdefaultdir=%{_datadir}/X11/app-defaults
-%make
+%make_build
 
 %install
 rm -rf %{buildroot}
