@@ -3,7 +3,7 @@
 
 Name:		xlockmore
 Summary:	An X terminal locking program
-Version:	5.58
+Version:	5.62
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Other
@@ -59,6 +59,8 @@ A GTK2 front-end to xlockmore.
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
 %build
+export CC=gcc
+export CXX=g++
 autoreconf -i
 %global optflags %{optflags} -I/usr/include/freetype2
 
@@ -72,7 +74,7 @@ autoreconf -i
 	--with-crypt \
 	--without-rplay \
 	--enable-appdefaultdir=%{_datadir}/X11/app-defaults
-%make
+%make_build
 
 %install
 rm -rf %{buildroot}
