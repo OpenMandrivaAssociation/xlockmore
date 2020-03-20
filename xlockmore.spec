@@ -59,6 +59,8 @@ A GTK2 front-end to xlockmore.
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 
 %build
+export CC=gcc
+export CXX=g++
 autoreconf -i
 %global optflags %{optflags} -I/usr/include/freetype2
 
