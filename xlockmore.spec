@@ -4,7 +4,7 @@
 Name:		xlockmore
 Summary:	An X terminal locking program
 Version:	5.71
-Release:	1
+Release:	2
 License:	BSD
 Group:		Graphical desktop/Other
 Url:		http://www.tux.org/~bagleyd/xlockmore.html
