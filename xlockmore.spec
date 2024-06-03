@@ -3,12 +3,12 @@
 
 Name:		xlockmore
 Summary:	An X terminal locking program
-Version:	5.77
+Version:	5.78
 Release:	1
 License:	BSD
 Group:		Graphical desktop/Other
-Url:		http://www.tux.org/~bagleyd/xlockmore.html
-Source0:	http://sillycycle.com/xlock/%name-%version.tar.xz
+Url:		https://www.tux.org/~bagleyd/xlockmore.html
+Source0:	https://sillycycle.com/xlock/%name-%version.tar.xz
 Source1:	xlock.pamd
 Patch3:		xlockmore-5.30-include_ftgl_path.patch
 Patch4:		xlockmore-5.56-pthreads.patch
