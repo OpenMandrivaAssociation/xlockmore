@@ -43,7 +43,7 @@ X sessions.
 
 %package gtk2
 Summary:	A GTK2 front-end to xlockmore
-Url:		http://www.tux.org/~bagleyd/xlockmore.html
+Url:		https://www.tux.org/~bagleyd/xlockmore.html
 Group:		Graphical desktop/Other
 License:	BSD
 Requires:	xlockmore
