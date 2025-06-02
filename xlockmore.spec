@@ -57,6 +57,8 @@ A GTK2 front-end to xlockmore.
 %patch 4 -p1 -b .pthreads
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
+sed -i '/__PROTO/d' xglock/xglock.c
+
 
 %build
 export CC=gcc
