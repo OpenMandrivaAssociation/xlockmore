@@ -35,6 +35,7 @@ BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(xpm)
 BuildRequires:	pkgconfig(xmu)
 BuildRequires:	nas-devel
+BuildRequires:	atomic-devel
 
 %description
 The xlockmore utility is an enhanced version of the standard xlock
