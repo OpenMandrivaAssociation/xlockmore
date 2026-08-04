@@ -81,7 +81,8 @@ autoreconf -i
 	--with-crypt \
 	--without-rplay \
 	--enable-appdefaultdir=%{_datadir}/X11/app-defaults
-%make_build
+# gtk2 is not std20 friendly	
+%make_build OPTIMIZE="%{optflags}  -std=gnu17"
 
 %install
 rm -rf %{buildroot}
