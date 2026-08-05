@@ -12,6 +12,7 @@ Source0:	https://sillycycle.com/xlock/%name-%version.tar.xz
 Source1:	xlock.pamd
 Patch3:		xlockmore-5.30-include_ftgl_path.patch
 Patch4:		xlockmore-5.56-pthreads.patch
+Patch5:		xlockmore-ignore-void.patch
 Requires:	pam >= 0.59
 Requires:	fortune-mod
 Requires:	pam
@@ -60,6 +61,7 @@ A GTK2 front-end to xlockmore.
 %setup -q
 %patch 3 -p1 -b .include_ftgl_path
 %patch 4 -p1 -b .pthreads
+%patch 5 -p1
 
 %{__sed} -i -e "s,/lib,/%{_lib},g" configure
 sed -i '/__PROTO/d' xglock/xglock.c
